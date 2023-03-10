@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send({
-        "hello"
-  });
+    res
+      .status(200)
+      .send('Hello server is running')
+      .end();
   });
 
 app.get('/mobile-app/v1/validate-domain', (req, res) => {
